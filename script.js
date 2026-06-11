@@ -137,6 +137,10 @@ function resetStock(){
 
 //受付番号リセット
 function resetTicketNo(){
+    
+    if(!confirm("受付番号をリセットしますか？\n1番から開始します")){
+        return; // 「キャンセル」を押したらここで処理をストップする
+    }
 
     ticketNo = 1;
 
