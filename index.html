@@ -1,0 +1,121 @@
+<h1>🍓タンフルレジ</h1>
+
+<button onclick="addItem('いちご',250)">
+    いちご 250円
+</button>
+
+<button onclick="addItem('みかん',200)">
+    みかん 200円
+</button>
+
+<button onclick="addItem('ぶどう',250)">
+    ぶどう 250円
+</button>
+
+<h2>注文内容</h2>
+
+<ul id="cart"></ul>
+
+<h2>合計: <span id="total">0</span> 円</h2>
+
+<hr>
+
+<h2>預かり金</h2>
+
+<input
+    type="number"
+    id="payment"
+    placeholder="支払額"
+/>
+
+<div id="keypad">
+    <button onclick="addNumber(7)">7</button>
+    <button onclick="addNumber(8)">8</button>
+    <button onclick="addNumber(9)">9</button><br>
+
+    <button onclick="addNumber(4)">4</button>
+    <button onclick="addNumber(5)">5</button>
+    <button onclick="addNumber(6)">6</button><br>
+
+    <button onclick="addNumber(1)">1</button>
+    <button onclick="addNumber(2)">2</button>
+    <button onclick="addNumber(3)">3</button><br>
+
+    <button onclick="clearPayment()">C</button>
+    <button onclick="addNumber(0)">0</button>
+    <button onclick="backspace()">←</button>
+</div>
+
+<button onclick="addMoney(100)">100円</button>
+<button onclick="addMoney(500)">500円</button>
+<button onclick="addMoney(1000)">1000円</button>
+
+<button onclick="calculateChange()">
+    おつり計算
+</button>
+
+<h2>
+    おつり:
+    <span id="change">0</span>
+    円
+</h2>
+
+<h2>番号札</h2>
+<div id="ticket"></div>
+
+<label>
+<input type="checkbox" id="needTicket">
+番号札を発行する
+</label>
+
+<button onclick="resetTicketNo()">
+受付番号リセット
+</button>
+
+<h2>お会計</h2>
+<p><button onclick="completeSale()">
+    会計完了
+</button></p>
+
+<h2>受付中の商品</h2>
+
+<ul id="orderList"></ul>
+
+
+
+
+<h2>在庫</h2>
+
+<ul id="stockList"></ul>
+
+
+<h2>在庫設定</h2>
+
+いちご
+<input type="number" id="stockStrawberry">
+
+みかん
+<input type="number" id="stockOrange">
+
+ぶどう
+<input type="number" id="stockGrape">
+
+<button onclick="resetStock()">
+在庫更新
+</button>
+
+<h2>売上グラフ</h2>
+<h2>
+総売上 :
+<span id="totalSales">0円</span>
+</h2>
+<canvas id="salesChart"></canvas>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+
+<button onclick="resetSales()">
+売上リセット
+</button>
+
+<canvas id="salesChart"></canvas>
