@@ -104,6 +104,10 @@ function updateStock() {
 //在庫リセット
 function resetStock(){
 
+    if(!confirm("在庫更新しても大丈夫ですか？\n")){
+        return; // 「キャンセル」を押したらここで処理をストップする
+    }
+
     stock["いちご"] =
     Number(
         document.getElementById(
